@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Remera Oversize | Rulos's</title>
+
+    <link rel="stylesheet" href="css/estiloss.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            RULOS'S
+        </a>
+
+        <nav class="menu">
+
+            <a href="productos.html">Productos</a>
+            <a href="#">Novedades</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Contacto</a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PRODUCTO -->
+
+    <main class="producto">
+
+        <!-- GALERÍA -->
+
+        <section class="galeria">
+
+            <div class="miniaturas">
+
+    <img src="img/Screenshot_2.png"
+         alt="Vista 1"
+         onclick="cambiarImagen('img/Screenshot_2.png')">
+
+    <img src="img/Screenshot_1.png"
+         alt="Vista 2"
+         onclick="cambiarImagen('img/Screenshot_1.png')">
+
+    <img src="img/Screenshot_2.png"
+         alt="Vista 3"
+         onclick="cambiarImagen('img/Screenshot_2.png')">
+
+</div>
+            </div>
+
+
+            <div class="imagen-principal">
+
+                <img id="imagenProducto"
+                     src="img/Screenshot_2.png"
+                     alt="Remera Oversize">
+
+            </div>
+
+        </section>
+
+
+        <!-- INFORMACIÓN -->
+
+        <section class="informacion-producto">
+
+            <p class="categoria">
+                REMERAS
+            </p>
+
+            <h1>
+                Remera Oversize
+            </h1>
+
+            <p class="precio-producto">
+                $15.000
+            </p>
+
+            <p class="transferencia">
+                $12.000 con transferencia
+            </p>
+
+
+            <hr>
+
+
+            <!-- TALLES -->
+
+            <div class="seleccion">
+
+                <h3>
+                    Talle
+                </h3>
+
+                <div class="talles">
+
+                    <button>S</button>
+                    <button>M</button>
+                    <button>L</button>
+                    <button>XL</button>
+
+                </div>
+
+            </div>
+
+
+            <!-- CANTIDAD -->
+
+            <div class="cantidad">
+
+                <h3>
+                    Cantidad
+                </h3>
+
+                <div class="contador">
+
+                    <button onclick="restar()">
+                        −
+                    </button>
+
+                    <span id="cantidad">
+                        1
+                    </span>
+
+                    <button onclick="sumar()">
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOTONES -->
+
+            <button class="btn-carrito">
+                AGREGAR AL CARRITO
+            </button>
+
+            <button class="btn-comprar">
+                COMPRAR AHORA
+            </button>
+
+
+            <!-- DESCRIPCIÓN -->
+
+            <div class="descripcion">
+
+                <h2>
+                    Descripción
+                </h2>
+
+                <p>
+                    Remera oversize de estilo urbano,
+                    cómoda y versátil. Ideal para combinar
+                    con diferentes estilos.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            Rulos's © 2026
+        </p>
+
+        <p>
+            Moda urbana para todos los estilos
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function cambiarImagen(imagen) {
+
+            document.getElementById("imagenProducto").src = imagen;
+
+        }
+
+
+        let cantidad = 1;
+
+
+        function sumar() {
+
+            cantidad++;
+
+            document.getElementById("cantidad").textContent = cantidad;
+
+        }
+
+
+        function restar() {
+
+            if (cantidad > 1) {
+
+                cantidad--;
+
+                document.getElementById("cantidad").textContent = cantidad;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
