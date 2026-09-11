@@ -1,380 +1,25 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-font-family:Arial,sans-serif;
-background:#f3efef;
-color:#1A1A1A;
-}
-
-header{
-background:#f5f5f5;
-padding:20px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:1000;
-box-shadow:0 2px 10px rgba(14, 13, 13, 0.925);
-}
-
-.logo h1{
-font-size:32px;
-letter-spacing:3px;
-}
-
-nav ul{
-display:flex;
-list-style:none;
-gap:30px;
-}
-
-nav ul li{
-position:relative;
-}
-
-nav a{
-text-decoration:none;
-color:#1A1A1A;
-font-weight:bold;
-}
-
-nav a:hover{
-color:#55624A;
-}
-
-.submenu li{
-padding:10px;
-}
-
-.submenu{
-    display:none;
-    position:absolute;
-    background:white;
-    top:30px;
-    left:0;
-    min-width:200px;
-    list-style:none;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-}
-
-.submenu.activo{
-    display:block;
-}
-
-.hero{
-position:relative;
-height:90vh;
-overflow:hidden;
-}
-
-.hero img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.hero-text{
-position:absolute;
-top:50%;
-left:10%;
-transform:translateY(-50%);
-color:white;
-}
-
-.hero-text h2{
-font-size:60px;
-margin-bottom:20px;
-}
-
-.hero-text p{
-font-size:24px;
-margin-bottom:30px;
-}
-
-.hero button{
-padding:15px 35px;
-border:none;
-background:#55624A;
-color:white;
-font-size:18px;
-cursor:pointer;
-transition:.3s;
-}
-
-.hero button:hover{
-background:#1A1A1A;
-}
-
-footer{
-background:#1A1A1A;
-color:white;
-text-align:center;
-padding:25px;
-}
-
-/* =========================================
-   PÁGINA DE PRODUCTOS
-========================================= */
-
-.titulo-productos {
-    text-align: center;
-    padding: 70px 20px 45px;
+body {
+    font-family: Arial, sans-serif;
     background-color: #F5F5F2;
-}
-
-.pequeno-titulo {
-    color: #55624A;
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    margin-bottom: 12px;
-}
-
-.titulo-productos h1 {
     color: #1A1A1A;
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.titulo-productos > p:last-child {
-    color: #8E8B83;
-    font-size: 17px;
 }
 
 
-/* CATÁLOGO */
+/* =========================
+   HEADER
+========================= */
 
-.catalogo {
-    width: 92%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px 0 80px;
-
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 25px;
-}
-
-
-/* PRODUCTO */
-
-.producto {
-    background-color: #F5F5F2;
-    transition: 0.3s;
-}
-
-.producto:hover {
-    transform: translateY(-5px);
-}
-
-
-/* IMAGEN */
-
-.imagen-producto {
-    position: relative;
-    width: 100%;
-    height: 390px;
-    overflow: hidden;
-    background-color: #8E8B83;
-}
-
-.imagen-producto img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-    transition: transform 0.4s;
-}
-
-.producto:hover .imagen-producto img {
-    transform: scale(1.04);
-}
-
-
-/* ETIQUETA NUEVO */
-
-.etiqueta {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-
+.header {
+    height: 80px;
     background-color: #1A1A1A;
     color: #F5F5F2;
-
-    padding: 8px 12px;
-
-    font-size: 12px;
-    font-weight: bold;
-}
-
-
-/* INFORMACIÓN */
-
-.informacion-producto {
-    padding: 18px 5px 25px;
-}
-
-.categoria {
-    color: #8E8B83;
-    font-size: 12px;
-    font-weight: bold;
-    letter-spacing: 2px;
-
-    margin-bottom: 8px;
-}
-
-.informacion-producto h2 {
-    color: #1A1A1A;
-    font-size: 18px;
-    font-weight: 500;
-
-    margin-bottom: 10px;
-}
-
-.precio {
-    color: #55624A;
-    font-size: 20px;
-    font-weight: bold;
-
-    margin-bottom: 18px;
-}
-
-
-/* BOTÓN */
-
-.boton-producto {
-    display: block;
-
-    width: 100%;
-
-    background-color: #55624A;
-    color: #F5F5F2;
-
-    text-align: center;
-    text-decoration: none;
-
-    padding: 13px;
-
-    font-size: 13px;
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.boton-producto:hover {
-    background-color: #1A1A1A;
-}
-
-
-/* =========================================
-   MENÚ PRODUCTOS
-========================================= */
-
-.menu-productos {
-    position: relative;
-}
-
-.submenu {
-    display: none;
-
-    position: absolute;
-
-    top: 100%;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    background-color: #F5F5F2;
-
-    min-width: 190px;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-
-    z-index: 100;
-}
-
-.submenu a {
-    display: block;
-
-    padding: 15px 18px;
-
-    color: #1A1A1A;
-
-    text-decoration: none;
-
-    font-weight: bold;
-}
-
-.submenu a:hover {
-    background-color: #8E8B83;
-    color: #F5F5F2;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    background-color: #1A1A1A;
-    color: #F5F5F2;
-
-    text-align: center;
-
-    padding: 30px;
-}
-
-
-/* =========================================
-   CELULAR
-========================================= */
-
-@media (max-width: 900px) {
-
-    .catalogo {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .imagen-producto {
-        height: 330px;
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .titulo-productos {
-        padding: 50px 20px 30px;
-    }
-
-    .titulo-productos h1 {
-        font-size: 32px;
-    }
-
-    .catalogo {
-        width: 90%;
-        grid-template-columns: 1fr;
-    }
-
-    .imagen-producto {
-        height: 400px;
-    }
-
-}/* =========================================
-   ENCABEZADO
-========================================= */
-
-.encabezado {
-    width: 100%;
-    height: 90px;
-
-    background-color: #F5F5F2;
 
     display: flex;
     align-items: center;
@@ -382,28 +27,15 @@ footer {
 
     padding: 0 5%;
 
-    border-bottom: 1px solid #8E8B83;
-
     position: relative;
-    z-index: 100;
+    z-index: 1000;
 }
-
-
-/* LOGO */
 
 .logo {
-    color: #1A1A1A;
-
-    text-decoration: none;
-
-    font-size: 30px;
+    font-size: 28px;
     font-weight: bold;
-
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
-
-
-/* MENÚ */
 
 .menu {
     display: flex;
@@ -411,10 +43,9 @@ footer {
     gap: 30px;
 }
 
-.menu > a,
-.productos-boton {
-    color: #1A1A1A;
-
+.menu a,
+.productos-menu button {
+    color: #F5F5F2;
     text-decoration: none;
 
     font-size: 15px;
@@ -426,20 +57,18 @@ footer {
     cursor: pointer;
 }
 
-.menu > a:hover,
-.productos-boton:hover {
-    color: #55624A;
-}
 
+/* =========================
+   MENÚ PRODUCTOS
+========================= */
 
-/* PRODUCTOS */
-
-.menu-productos {
+.productos-menu {
     position: relative;
 }
 
-
-/* SUBMENÚ */
+.productos-menu button:hover {
+    color: #8E8B83;
+}
 
 .submenu {
     display: none;
@@ -453,197 +82,469 @@ footer {
 
     background-color: #F5F5F2;
 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-
-    border: 1px solid #8E8B83;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
-
-
-/* CUANDO SE ABRE */
 
 .submenu.mostrar {
     display: block;
 }
 
-
 .submenu a {
     display: block;
 
-    padding: 15px 18px;
-
     color: #1A1A1A;
+
+    padding: 15px;
+
+    font-size: 14px;
+}
+
+.submenu a:hover {
+    background-color: #8E8B83;
+    color: white;
+}
+
+
+/* =========================
+   CARRUSEL
+========================= */
+
+.carrusel {
+    width: 100%;
+    height: 650px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #1A1A1A;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+
+    transition: opacity 0.7s ease;
+
+    pointer-events: none;
+}
+
+.slide.activo {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* OSCURECER IMAGEN */
+
+.slide::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.25);
+}
+
+
+/* TEXTO DEL CARRUSEL */
+
+.texto-slide {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+
+    color: white;
+
+    width: 90%;
+}
+
+.texto-slide h1 {
+    font-size: 55px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+}
+
+.texto-slide p {
+    font-size: 22px;
+
+    margin-bottom: 30px;
+}
+
+.texto-slide a {
+    display: inline-block;
+
+    background-color: #55624A;
+
+    color: white;
 
     text-decoration: none;
 
+    padding: 15px 35px;
+
     font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.texto-slide a:hover {
+    background-color: #1A1A1A;
 }
 
 
-.submenu a:hover {
+/* =========================
+   FLECHAS
+========================= */
+
+.flecha {
+    position: absolute;
+
+    z-index: 5;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    background: rgba(0,0,0,0.5);
+
+    color: white;
+
+    border: none;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 25px;
+}
+
+.anterior {
+    left: 25px;
+}
+
+.siguiente {
+    right: 25px;
+}
+
+.flecha:hover {
+    background-color: #55624A;
+}
+
+
+/* =========================
+   INDICADORES
+========================= */
+
+.indicadores {
+    position: absolute;
+
+    z-index: 5;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 10px;
+}
+
+.punto {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    opacity: 0.5;
+
+    cursor: pointer;
+}
+
+.punto.activo-punto {
+    opacity: 1;
+    background-color: #55624A;
+}
+
+
+/* =========================
+   PRESENTACIÓN
+========================= */
+
+.presentacion {
+    text-align: center;
+
+    padding: 80px 20px;
+
+    background-color: #F5F5F2;
+}
+
+.subtitulo {
+    color: #55624A;
+
+    letter-spacing: 5px;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.presentacion h2 {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.presentacion p:last-child {
+    color: #8E8B83;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   CATEGORÍAS
+========================= */
+
+.categorias {
+    padding: 60px 5%;
+}
+
+.categorias h2 {
+    text-align: center;
+
+    margin-bottom: 40px;
+
+    font-size: 30px;
+}
+
+.categorias-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.categoria {
+    height: 180px;
+
     background-color: #55624A;
 
-    color: #F5F5F2;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.categoria:hover {
+    background-color: #1A1A1A;
+
+    transform: translateY(-5px);
 }
 
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* =========================
+   FOOTER
+========================= */
 
-@media (max-width: 750px) {
+footer {
+    background-color: #1A1A1A;
 
-    .encabezado {
+    color: #F5F5F2;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+    .header {
         height: auto;
 
-        flex-direction: column;
-
-        gap: 20px;
-
-        padding: 25px 20px;
-    }
-
-    .menu {
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-        gap: 18px;
-    }
-
-}
-/* =================================
-   DISEÑO ADAPTABLE / RESPONSIVE
-================================= */
-
-/* TABLETS */
-@media (max-width: 900px) {
-
-    .header {
-        padding: 20px 30px;
-    }
-
-    .menu {
-        gap: 20px;
-    }
-
-    .producto {
-        grid-template-columns: 1fr;
-        max-width: 700px;
-    }
-
-    .imagen-principal img {
-        height: 550px;
-    }
-
-}
-
-
-/* CELULARES */
-@media (max-width: 600px) {
-
-    /* HEADER */
-
-    .header {
-        flex-direction: column;
-        gap: 20px;
         padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
     }
 
     .logo {
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .menu {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-
-    /* PRODUCTO */
-
-    .producto {
-        display: flex;
-        flex-direction: column;
-        margin: 20px auto;
-        padding: 15px;
-        gap: 30px;
-    }
-
-
-    /* GALERÍA */
-
-    .galeria {
-        display: flex;
-        flex-direction: column-reverse;
-    }
-
-    .miniaturas {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    .miniaturas img {
-        width: 70px;
-        height: 85px;
-    }
-
-    .imagen-principal img {
         width: 100%;
-        height: auto;
-        max-height: 500px;
+
+        justify-content: center;
+
+        gap: 15px;
+
+        flex-wrap: wrap;
+    }
+
+    .menu a,
+    .productos-menu button {
+        font-size: 13px;
+    }
+
+
+    /* CARRUSEL */
+
+    .carrusel {
+        height: 500px;
+    }
+
+    .slide img {
         object-fit: cover;
     }
 
+    .texto-slide h1 {
+        font-size: 32px;
 
-    /* INFORMACIÓN */
-
-    .informacion-producto {
-        padding: 5px;
+        letter-spacing: 2px;
     }
 
-    .informacion-producto h1 {
-        font-size: 28px;
+    .texto-slide p {
+        font-size: 17px;
+
+        margin-bottom: 20px;
     }
 
-    .precio-producto {
-        font-size: 26px;
+    .texto-slide a {
+        padding: 12px 22px;
+
+        font-size: 13px;
+    }
+
+    .flecha {
+        width: 40px;
+        height: 40px;
+
+        font-size: 18px;
+    }
+
+    .anterior {
+        left: 10px;
+    }
+
+    .siguiente {
+        right: 10px;
     }
 
 
-    /* BOTONES */
+    /* PRESENTACIÓN */
 
-    .btn-carrito,
-    .btn-comprar {
-        padding: 18px;
-        font-size: 14px;
+    .presentacion {
+        padding: 60px 20px;
     }
 
+    .presentacion h2 {
+        font-size: 30px;
+    }
+
+
+    /* CATEGORÍAS */
+
+    .categorias-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .categoria {
+        height: 130px;
+
+        font-size: 15px;
+    }
 }
 
 
-/* CELULARES MUY CHICOS */
-@media (max-width: 400px) {
+/* =========================
+   CELULAR PEQUEÑO
+========================= */
+
+@media (max-width: 480px) {
 
     .menu {
         gap: 10px;
     }
 
-    .menu a {
-        font-size: 14px;
+    .menu a,
+    .productos-menu button {
+        font-size: 12px;
     }
 
-    .producto {
-        padding: 10px;
+    .carrusel {
+        height: 450px;
     }
 
-    .informacion-producto h1 {
-        font-size: 24px;
+    .texto-slide h1 {
+        font-size: 26px;
     }
 
-    .miniaturas img {
-        width: 60px;
-        height: 70px;
+    .texto-slide p {
+        font-size: 15px;
     }
 
+    .categorias {
+        padding: 40px 20px;
     }
+
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categoria {
+        height: 100px;
+    }
+}
