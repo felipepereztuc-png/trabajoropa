@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rulos's - Productos</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <header class="encabezado">
+
+    <a href="index.html" class="logo">
+        RULOS'S
+    </a>
+
+    <nav class="menu">
+
+        <div class="menu-productos">
+
+            <button class="productos-boton" id="botonProductos">
+                Productos ▼
+            </button>
+
+            <div class="submenu" id="submenuProductos">
+
+                <a href="remeras.html">Remeras</a>
+                <a href="buzos.html">Buzos</a>
+                <a href="pantalones.html">Pantalones</a>
+                <a href="zapatillas.html">Zapatillas</a>
+
+            </div>
+
+        </div>
+
+        <a href="#">Novedades</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+
+    </nav>
+
+</header>
+
+
+    <!-- PRESENTACIÓN -->
+    <section class="titulo-productos">
+
+        <p class="pequeno-titulo">COLECCIÓN RULOS'S</p>
+
+        <h1>Todos los productos</h1>
+
+        <p>
+            Descubrí nuestra selección de prendas y accesorios.
+        </p>
+
+    </section>
+
+
+    <!-- PRODUCTOS -->
+    <main class="catalogo">
+
+
+        <!-- REMERA -->
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="img/Screenshot_7.png" alt="Remera Oversize">
+
+                <span class="etiqueta">NUEVO</span>
+
+            </div>
+
+            <div class="informacion-producto">
+
+                <p class="categoria">
+                    REMERAS
+                </p>
+
+                <h2>
+                    Remera Oversize
+                </h2>
+
+                <p class="precio">
+                    $15.000
+                </p>
+
+                <a href="rem1.html" class="boton-producto">
+                    VER PRODUCTO
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- PANTALÓN -->
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="img/Screenshot_8.png" alt="Pantalón Cargo">
+
+            </div>
+
+            <div class="informacion-producto">
+
+                <p class="categoria">
+                    PANTALONES
+                </p>
+
+                <h2>
+                    Pantalón Cargo
+                </h2>
+
+                <p class="precio">
+                    $35.000
+                </p>
+
+                <a href="#" class="boton-producto">
+                    VER PRODUCTO
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- BUZO -->
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="img/Screenshot_4.png" alt="Buzo Urban">
+
+            </div>
+
+            <div class="informacion-producto">
+
+                <p class="categoria">
+                    BUZOS
+                </p>
+
+                <h2>
+                    Buzo Urban
+                </h2>
+
+                <p class="precio">
+                    $28.000
+                </p>
+
+                <a href="#" class="boton-producto">
+                    VER PRODUCTO
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- ZAPATILLAS -->
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="img/Screenshot_5.png" alt="Zapatillas Urban">
+
+            </div>
+
+            <div class="informacion-producto">
+
+                <p class="categoria">
+                    ZAPATILLAS
+                </p>
+
+                <h2>
+                    Zapatillas Urban
+                </h2>
+
+                <p class="precio">
+                    $68.000
+                </p>
+
+                <a href="#" class="boton-producto">
+                    VER PRODUCTO
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SEGUNDA REMERA -->
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="img/Screenshot_3.png" alt="Remera Básica">
+
+            </div>
+
+            <div class="informacion-producto">
+
+                <p class="categoria">
+                    REMERAS
+                </p>
+
+                <h2>
+                    Remera Básica
+                </h2>
+
+                <p class="precio">
+                    $12.000
+                </p>
+
+                <a href="#" class="boton-producto">
+                    VER PRODUCTO
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SEGUNDO BUZO -->
+        <article class="producto">
+
+            <div class="imagen-producto">
+
+                <img src="img/Screenshot_2.png" alt="Buzo Hoodie">
+
+            </div>
+
+            <div class="informacion-producto">
+
+                <p class="categoria">
+                    BUZOS
+                </p>
+
+                <h2>
+                    Buzo Hoodie
+                </h2>
+
+                <p class="precio">
+                    $32.000
+                </p>
+
+                <a href="#" class="boton-producto">
+                    VER PRODUCTO
+                </a>
+
+            </div>
+
+        </article>
+
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            Rulos's © 2026 
+        </p>
+
+    </footer>
+    <script>
+
+    const botonProductos = document.getElementById("botonProductos");
+    const submenuProductos = document.getElementById("submenuProductos");
+
+    botonProductos.addEventListener("click", function () {
+
+        submenuProductos.classList.toggle("mostrar");
+
+    });
+
+</script>
+
+
+</body>
+
+</html>
