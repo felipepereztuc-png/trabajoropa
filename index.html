@@ -2,79 +2,177 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>RULOS'S</title>
+    <title>Rulos's - Tienda de Ropa</title>
 
     <link rel="stylesheet" href="css/estilos.css">
-
 </head>
 
 <body>
 
-<header>
+    <!-- HEADER -->
+    <header class="header">
 
-    <div class="logo">
+        <div class="logo">
+            RULOS'S
+        </div>
 
-        <h1>RULOS'S</h1>
+        <nav class="menu">
+            <a href="index.html">Inicio</a>
 
-    </div>
+            <div class="productos-menu">
+                <button id="productosBtn">
+                    Productos ▼
+                </button>
 
-    <nav>
+                <div class="submenu" id="submenu">
+                    <a href="productos.html">Todos los productos</a>
+                    <a href="remeras.html">Remeras</a>
+                    <a href="buzos.html">Buzos</a>
+                    <a href="pantalones.html">Pantalones</a>
+                    <a href="zapatillas.html">Zapatillas</a>
+                </div>
+            </div>
 
-        <ul>
+            <a href="#">Novedades</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+    </header>
 
 
-            <li class="dropdown">
-    <a href="#" onclick="mostrarMenu()">Productos ▼</a>
+    <!-- CARRUSEL PRINCIPAL -->
+    <section class="carrusel">
 
-    <ul class="submenu" id="submenu">
-        <li><a href="remeras.html">Remeras</a></li>
-        <li><a href="buzos.html">Buzos</a></li>
-        <li><a href="pantalones.html">Pantalones</a></li>
-        <li><a href="zapatillas.html">Zapatillas</a></li>
+        <div class="slide activo">
+            <img src="img/Screenshot_4.png" alt="Remera Oversize">
 
-    </ul>
-</li>
+            <div class="texto-slide">
+                <h1>NUEVA COLECCIÓN</h1>
+                <p>Vestí tu estilo.</p>
 
-            <li><a href="https://x.com/Feli20075">Novedades</a></li>
+                <a href="productos.html">
+                    VER PRODUCTOS
+                </a>
+            </div>
+        </div>
 
-            <li><a href="https://x.com/Feli20075">Nosotros</a></li>
 
-            <li><a href="https://x.com/Feli20075">Contacto</a></li>
+        <div class="slide">
+            <img src="img/Screenshot_5.png" alt="Remera Basic">
 
-        </ul>
+            <div class="texto-slide">
+                <h1>ESTILO URBANO</h1>
+                <p>Diseños para todos.</p>
 
-    </nav>
+                <a href="remeras.html">
+                    VER REMERAS
+                </a>
+            </div>
+        </div>
 
-</header>
 
-<section class="hero">
+        <div class="slide">
+            <img src="img/Screenshot_6.png" alt="Pantalón">
 
-    <img src="img/Diseño sin título.png" alt="RULOS'S">
+            <div class="texto-slide">
+                <h1>NUEVOS INGRESOS</h1>
+                <p>Descubrí lo nuevo de Rulos's.</p>
 
-    <div class="hero-text">
+                <a href="productos.html">
+                    VER PRODUCTOS
+                </a>
+            </div>
+        </div>
 
-        <h2>NUEVA COLECCIÓN</h2>
 
-        <p>Vestí tu estilo.</p>
+        <!-- BOTONES -->
+        <button class="flecha anterior" onclick="cambiarSlide(-1)">
+            ❮
+        </button>
 
-        <li><a href="productos.html"><button>VER PRODUCTOS</button></a></li>
-        
+        <button class="flecha siguiente" onclick="cambiarSlide(1)">
+            ❯
+        </button>
 
-    </div>
 
-</section>
+        <!-- INDICADORES -->
+        <div class="indicadores">
 
-<footer>
+            <span class="punto activo-punto" onclick="irSlide(0)"></span>
 
-    <p>© 2026 RULOS'S | Proyecto Escolar</p>
+            <span class="punto" onclick="irSlide(1)"></span>
 
-</footer>
-<script src="js/script.js"></script>
+            <span class="punto" onclick="irSlide(2)"></span>
+
+        </div>
+
+    </section>
+
+
+    <!-- PRESENTACIÓN -->
+    <section class="presentacion">
+
+        <p class="subtitulo">
+            RULOS'S
+        </p>
+
+        <h2>
+            Vestí tu estilo
+        </h2>
+
+        <p>
+            Ropa urbana, unisex y con personalidad.
+            Descubrí nuestra colección.
+        </p>
+
+    </section>
+
+
+    <!-- CATEGORÍAS -->
+    <section class="categorias">
+
+        <h2>
+            Explorá nuestras categorías
+        </h2>
+
+        <div class="categorias-grid">
+
+            <a href="remeras.html" class="categoria">
+                <span>REMERAS</span>
+            </a>
+
+            <a href="buzos.html" class="categoria">
+                <span>BUZOS</span>
+            </a>
+
+            <a href="pantalones.html" class="categoria">
+                <span>PANTALONES</span>
+            </a>
+
+            <a href="zapatillas.html" class="categoria">
+                <span>ZAPATILLAS</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            Proyecto Escolar - Rulos's 2026
+        </p>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
 
 </body>
 
