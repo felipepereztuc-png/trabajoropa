@@ -511,3 +511,139 @@ footer {
     }
 
 }
+/* =================================
+   DISEÑO ADAPTABLE / RESPONSIVE
+================================= */
+
+/* TABLETS */
+@media (max-width: 900px) {
+
+    .header {
+        padding: 20px 30px;
+    }
+
+    .menu {
+        gap: 20px;
+    }
+
+    .producto {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+
+    .imagen-principal img {
+        height: 550px;
+    }
+
+}
+
+
+/* CELULARES */
+@media (max-width: 600px) {
+
+    /* HEADER */
+
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+
+    /* PRODUCTO */
+
+    .producto {
+        display: flex;
+        flex-direction: column;
+        margin: 20px auto;
+        padding: 15px;
+        gap: 30px;
+    }
+
+
+    /* GALERÍA */
+
+    .galeria {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .miniaturas {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .miniaturas img {
+        width: 70px;
+        height: 85px;
+    }
+
+    .imagen-principal img {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: cover;
+    }
+
+
+    /* INFORMACIÓN */
+
+    .informacion-producto {
+        padding: 5px;
+    }
+
+    .informacion-producto h1 {
+        font-size: 28px;
+    }
+
+    .precio-producto {
+        font-size: 26px;
+    }
+
+
+    /* BOTONES */
+
+    .btn-carrito,
+    .btn-comprar {
+        padding: 18px;
+        font-size: 14px;
+    }
+
+}
+
+
+/* CELULARES MUY CHICOS */
+@media (max-width: 400px) {
+
+    .menu {
+        gap: 10px;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    .producto {
+        padding: 10px;
+    }
+
+    .informacion-producto h1 {
+        font-size: 24px;
+    }
+
+    .miniaturas img {
+        width: 60px;
+        height: 70px;
+    }
+
+}
