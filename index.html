@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -5,175 +6,556 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rulos's - Tienda de Ropa</title>
+    <title>Rulos's | Tienda de Ropa</title>
 
     <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- ================= HEADER ================= -->
+
     <header class="header">
 
         <div class="logo">
-            RULOS'S
+            <a href="index.html">RULOS'S</a>
         </div>
 
-        <nav class="menu">
-            <a href="index.html">Inicio</a>
+        <nav class="nav">
+
+            <a href="index.html">INICIO</a>
 
             <div class="productos-menu">
-                <button id="productosBtn">
-                    Productos ▼
+                <button class="productos-btn">
+                    PRODUCTOS
+                    <span>⌄</span>
                 </button>
 
-                <div class="submenu" id="submenu">
-                    <a href="productos.html">Todos los productos</a>
-                    <a href="remeras.html">Remeras</a>
-                    <a href="buzos.html">Buzos</a>
-                    <a href="pantalones.html">Pantalones</a>
-                    <a href="zapatillas.html">Zapatillas</a>
+                <div class="submenu">
+                    <a href="productos.html">VER TODOS</a>
+                    <a href="remeras.html">REMERAS</a>
+                    <a href="buzos.html">BUZOS</a>
+                    <a href="pantalones.html">PANTALONES</a>
+                    <a href="zapatillas.html">ZAPATILLAS</a>
                 </div>
             </div>
 
-            <a href="#">Novedades</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Contacto</a>
+            <a href="#novedades">NOVEDADES</a>
+            <a href="#nosotros">NOSOTROS</a>
+
         </nav>
+
+        <div class="carrito">
+            🛒
+        </div>
 
     </header>
 
 
-    <!-- CARRUSEL PRINCIPAL -->
-    <section class="carrusel">
+    <!-- ================= CARRUSEL ================= -->
 
-        <div class="slide activo">
-            <img src="img/Screenshot_4.png" alt="Remera Oversize">
+    <main>
 
-            <div class="texto-slide">
-                <h1>NUEVA COLECCIÓN</h1>
-                <p>Vestí tu estilo.</p>
+        <section class="carrusel">
 
-                <a href="productos.html">
-                    VER PRODUCTOS
-                </a>
+            <div class="slide slide-1">
+
+                <div class="slide-contenido">
+
+                    <p class="mini-titulo">RULOS'S URBAN</p>
+
+                    <h1>
+                        VESTÍ<br>
+                        TU ESTILO
+                    </h1>
+
+                    <p>
+                        Ropa urbana, unisex y con personalidad.
+                    </p>
+
+                    <a href="productos.html" class="boton">
+                        COMPRAR AHORA
+                    </a>
+
+                </div>
+
             </div>
-        </div>
 
 
-        <div class="slide">
-            <img src="img/Screenshot_5.png" alt="Remera Basic">
+            <div class="slide slide-2">
 
-            <div class="texto-slide">
-                <h1>ESTILO URBANO</h1>
-                <p>Diseños para todos.</p>
+                <div class="slide-contenido">
 
-                <a href="remeras.html">
-                    VER REMERAS
-                </a>
+                    <p class="mini-titulo">NUEVA COLECCIÓN</p>
+
+                    <h2>
+                        NUEVOS<br>
+                        INGRESOS
+                    </h2>
+
+                    <p>
+                        Descubrí lo nuevo de Rulos's.
+                    </p>
+
+                    <a href="#novedades" class="boton">
+                        DESCUBRIR
+                    </a>
+
+                </div>
+
             </div>
-        </div>
 
 
-        <div class="slide">
-            <img src="img/Screenshot_6.png" alt="Pantalón">
+            <div class="slide slide-3">
 
-            <div class="texto-slide">
-                <h1>NUEVOS INGRESOS</h1>
-                <p>Descubrí lo nuevo de Rulos's.</p>
+                <div class="slide-contenido">
 
-                <a href="productos.html">
-                    VER PRODUCTOS
-                </a>
+                    <p class="mini-titulo">RULOS'S</p>
+
+                    <h2>
+                        TU ROPA.<br>
+                        TU ESTILO.
+                    </h2>
+
+                    <p>
+                        Diseñado para todos.
+                    </p>
+
+                    <a href="productos.html" class="boton">
+                        VER PRODUCTOS
+                    </a>
+
+                </div>
+
             </div>
-        </div>
+
+        </section>
 
 
-        <!-- BOTONES -->
-        <button class="flecha anterior" onclick="cambiarSlide(-1)">
-            ❮
-        </button>
+        <!-- ================= CATEGORÍAS ================= -->
 
-        <button class="flecha siguiente" onclick="cambiarSlide(1)">
-            ❯
-        </button>
+        <section class="categorias">
+
+            <div class="titulo-seccion">
+
+                <p>EXPLORÁ</p>
+
+                <h2>
+                    RULOS'S
+                </h2>
+
+            </div>
+
+            <div class="categorias-grid">
+
+                <a href="remeras.html" class="categoria">
+                    <div class="categoria-imagen remeras-bg"></div>
+
+                    <div class="categoria-texto">
+                        <h3>REMERAS</h3>
+                        <span>VER CATEGORÍA →</span>
+                    </div>
+                </a>
 
 
-        <!-- INDICADORES -->
-        <div class="indicadores">
+                <a href="buzos.html" class="categoria">
+                    <div class="categoria-imagen buzos-bg"></div>
 
-            <span class="punto activo-punto" onclick="irSlide(0)"></span>
-
-            <span class="punto" onclick="irSlide(1)"></span>
-
-            <span class="punto" onclick="irSlide(2)"></span>
-
-        </div>
-
-    </section>
+                    <div class="categoria-texto">
+                        <h3>BUZOS</h3>
+                        <span>VER CATEGORÍA →</span>
+                    </div>
+                </a>
 
 
-    <!-- PRESENTACIÓN -->
-    <section class="presentacion">
+                <a href="pantalones.html" class="categoria">
+                    <div class="categoria-imagen pantalones-bg"></div>
 
-        <p class="subtitulo">
+                    <div class="categoria-texto">
+                        <h3>PANTALONES</h3>
+                        <span>VER CATEGORÍA →</span>
+                    </div>
+                </a>
+
+
+                <a href="zapatillas.html" class="categoria">
+                    <div class="categoria-imagen zapatillas-bg"></div>
+
+                    <div class="categoria-texto">
+                        <h3>ZAPATILLAS</h3>
+                        <span>VER CATEGORÍA →</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= NUEVOS INGRESOS ================= -->
+
+        <section class="productos-destacados" id="novedades">
+
+            <div class="titulo-seccion">
+
+                <p>DESCUBRÍ</p>
+
+                <h2>
+                    NUEVOS INGRESOS
+                </h2>
+
+            </div>
+
+
+            <div class="productos-grid">
+
+
+                <!-- PRODUCTO 1 -->
+
+                <article class="producto">
+
+                    <a href="productos.html">
+
+                        <div class="producto-imagen">
+
+                            <img src="img/Screenshot_1.png"
+                                alt="Remera oversize Rulos's">
+
+                            <span class="etiqueta">
+                                NUEVO
+                            </span>
+
+                        </div>
+
+                        <div class="producto-info">
+
+                            <h3>
+                                REMERA OVERSIZE
+                            </h3>
+
+                            <p>
+                                Rulos's Urban
+                            </p>
+
+                            <strong>
+                                $25.000
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+
+                <!-- PRODUCTO 2 -->
+
+                <article class="producto">
+
+                    <a href="productos.html">
+
+                        <div class="producto-imagen">
+
+                            <img src="img/Screenshot_2.png"
+                                alt="Buzo urbano Rulos's">
+
+                            <span class="etiqueta">
+                                NUEVO
+                            </span>
+
+                        </div>
+
+                        <div class="producto-info">
+
+                            <h3>
+                                BUZO URBANO
+                            </h3>
+
+                            <p>
+                                Rulos's Urban
+                            </p>
+
+                            <strong>
+                                $45.000
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+
+                <!-- PRODUCTO 3 -->
+
+                <article class="producto">
+
+                    <a href="productos.html">
+
+                        <div class="producto-imagen">
+
+                            <img src="img/Screenshot_4.png"
+                                alt="Pantalón cargo Rulos's">
+
+                        </div>
+
+                        <div class="producto-info">
+
+                            <h3>
+                                PANTALÓN CARGO
+                            </h3>
+
+                            <p>
+                                Rulos's Urban
+                            </p>
+
+                            <strong>
+                                $38.000
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+
+                <!-- PRODUCTO 4 -->
+
+                <article class="producto">
+
+                    <a href="productos.html">
+
+                        <div class="producto-imagen">
+
+                            <img src="img/Screenshot_8.png"
+                                alt="Zapatillas urban Rulos's">
+
+                        </div>
+
+                        <div class="producto-info">
+
+                            <h3>
+                                ZAPATILLAS URBAN
+                            </h3>
+
+                            <p>
+                                Rulos's Urban
+                            </p>
+
+                            <strong>
+                                $60.000
+                            </strong>
+
+                        </div>
+
+                    </a>
+
+                </article>
+
+            </div>
+
+
+            <div class="boton-centro">
+
+                <a href="productos.html" class="boton boton-claro">
+                    VER TODOS LOS PRODUCTOS
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= RULOS'S URBAN ================= -->
+
+        <section class="marca" id="nosotros">
+
+            <div class="marca-imagen">
+
+                <img src="img/Diseño sin título.png"
+                    alt="Rulos's Urban">
+
+            </div>
+
+            <div class="marca-contenido">
+
+                <p>
+                    RULOS'S URBAN
+                </p>
+
+                <h2>
+                    VESTÍ TU<br>
+                    ESTILO.
+                </h2>
+
+                <p class="marca-descripcion">
+                    Una marca pensada para quienes buscan
+                    comodidad, personalidad y estilo.
+                </p>
+
+                <a href="productos.html" class="boton">
+                    DESCUBRIR RULOS'S
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= OFERTAS ================= -->
+
+        <section class="ofertas">
+
+            <div class="ofertas-contenido">
+
+                <p>
+                    RULOS'S SALE
+                </p>
+
+                <h2>
+                    OFERTAS
+                </h2>
+
+                <span>
+                    Encontrá productos seleccionados
+                    a precios especiales.
+                </span>
+
+                <a href="productos.html" class="boton">
+                    VER OFERTAS
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SERVICIOS ================= -->
+
+        <section class="beneficios">
+
+            <div>
+                <span>🚚</span>
+
+                <h3>
+                    ENVÍOS
+                </h3>
+
+                <p>
+                    Recibí tu pedido donde estés.
+                </p>
+            </div>
+
+
+            <div>
+                <span>💳</span>
+
+                <h3>
+                    PAGOS
+                </h3>
+
+                <p>
+                    Diferentes medios de pago.
+                </p>
+            </div>
+
+
+            <div>
+                <span>💬</span>
+
+                <h3>
+                    CONTACTO
+                </h3>
+
+                <p>
+                    Estamos para ayudarte.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
             RULOS'S
-        </p>
-
-        <h2>
-            Vestí tu estilo
-        </h2>
+        </div>
 
         <p>
-            Ropa urbana, unisex y con personalidad.
-            Descubrí nuestra colección.
+            Vestí tu estilo.
         </p>
 
-    </section>
+        <div class="footer-links">
 
-
-    <!-- CATEGORÍAS -->
-    <section class="categorias">
-
-        <h2>
-            Explorá nuestras categorías
-        </h2>
-
-        <div class="categorias-grid">
-
-            <a href="remeras.html" class="categoria">
-                <span>REMERAS</span>
+            <a href="index.html">
+                Inicio
             </a>
 
-            <a href="buzos.html" class="categoria">
-                <span>BUZOS</span>
+            <a href="productos.html">
+                Productos
             </a>
 
-            <a href="pantalones.html" class="categoria">
-                <span>PANTALONES</span>
-            </a>
-
-            <a href="zapatillas.html" class="categoria">
-                <span>ZAPATILLAS</span>
+            <a href="#nosotros">
+                Nosotros
             </a>
 
         </div>
 
-    </section>
+        <div class="redes">
 
+            <a href="#">
+                Instagram
+            </a>
 
-    <!-- FOOTER -->
-    <footer>
+            <a href="#">
+                WhatsApp
+            </a>
 
-        <p>
-            Proyecto Escolar - Rulos's 2026
+        </div>
+
+        <p class="copyright">
+            © 2026 Rulos's — Todos los derechos reservados.
         </p>
 
     </footer>
 
 
-    <script src="js/script.js"></script>
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script>
+
+        const botonProductos =
+            document.querySelector(".productos-btn");
+
+        const menuProductos =
+            document.querySelector(".productos-menu");
+
+
+        botonProductos.addEventListener("click", function () {
+
+            menuProductos.classList.toggle("activo");
+
+        });
+
+
+        document.addEventListener("click", function (evento) {
+
+            if (!menuProductos.contains(evento.target)) {
+
+                menuProductos.classList.remove("activo");
+
+            }
+
+        });
+
+    </script>
 
 </body>
 
 </html>
+```
