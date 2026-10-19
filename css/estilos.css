@@ -1,7 +1,5 @@
 
-/* =====================================================
-   RULOS'S - ESTILOS GENERALES
-   ===================================================== */
+
 
 * {
     margin: 0;
@@ -30,9 +28,7 @@ img {
 }
 
 
-/* =====================================================
-   HEADER
-   ===================================================== */
+
 
 .header {
     width: 100%;
@@ -66,7 +62,7 @@ img {
 }
 
 
-/* NAV */
+
 
 .nav {
     display: flex;
@@ -90,7 +86,7 @@ img {
 }
 
 
-/* PRODUCTOS */
+
 
 .productos-menu {
     position: relative;
@@ -144,16 +140,14 @@ img {
 }
 
 
-/* CARRITO */
+
 
 .carrito {
     font-size: 22px;
 }
 
 
-/* =====================================================
-   CARRUSEL
-   ===================================================== */
+
 
 .carrusel {
     width: 100%;
@@ -165,7 +159,6 @@ img {
 }
 
 
-/* SLIDES */
 
 .slide {
     position: absolute;
@@ -187,7 +180,7 @@ img {
 }
 
 
-/* IMÁGENES DEL CARRUSEL */
+
 
 .slide-1 {
     background-image:
@@ -251,7 +244,7 @@ img {
 }
 
 
-/* TEXTO CARRUSEL */
+
 
 .slide-contenido {
     color: white;
@@ -285,9 +278,7 @@ img {
 }
 
 
-/* =====================================================
-   BOTONES
-   ===================================================== */
+
 
 .boton {
     display: inline-block;
@@ -324,9 +315,7 @@ img {
 }
 
 
-/* =====================================================
-   TÍTULOS
-   ===================================================== */
+
 
 .titulo-seccion {
     text-align: center;
@@ -351,22 +340,26 @@ img {
 }
 
 
-/* =====================================================
-   CATEGORÍAS
-   ===================================================== */
+
 
 .categorias {
     padding: 90px 5%;
 }
 
+
 .categorias-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
     gap: 18px;
 }
+
+.categorias-grid .categoria {
+    flex: 1 1 220px;
+    min-width: 0;
+}
+
 
 .categoria {
     height: 400px;
@@ -393,7 +386,6 @@ img {
 }
 
 
-/* FOTOS CATEGORÍAS */
 
 .remeras-bg {
     background-image:
@@ -432,7 +424,7 @@ img {
 }
 
 
-/* TEXTO */
+
 
 .categoria-texto {
     position: absolute;
@@ -456,9 +448,7 @@ img {
 }
 
 
-/* =====================================================
-   PRODUCTOS
-   ===================================================== */
+
 
 .productos-destacados {
     padding: 90px 5%;
@@ -466,15 +456,19 @@ img {
     background-color: white;
 }
 
+
 .productos-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
     gap: 25px;
 }
 
+.productos-grid .producto {
+    flex: 1 1 220px;
+    min-width: 0;
+}
 .producto {
     background-color: white;
 }
@@ -548,20 +542,22 @@ img {
 }
 
 
-/* =====================================================
-   MARCA
-   ===================================================== */
+
+
 
 .marca {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
     min-height: 600px;
-
     background-color: #55624A;
-
     color: white;
+}
+
+.marca-imagen,
+.marca-contenido {
+    flex: 1 1 350px;
+    min-width: 0;
 }
 
 .marca-imagen {
@@ -612,9 +608,7 @@ img {
 }
 
 
-/* =====================================================
-   OFERTAS
-   ===================================================== */
+
 
 .ofertas {
     min-height: 430px;
@@ -660,23 +654,22 @@ img {
 }
 
 
-/* =====================================================
-   BENEFICIOS
-   ===================================================== */
+
+
 
 .beneficios {
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
     gap: 20px;
-
     padding: 70px 5%;
-
     background-color: #F5F5F2;
-
     text-align: center;
+}
+
+.beneficios > div {
+    flex: 1 1 220px;
 }
 
 .beneficios span {
@@ -702,9 +695,6 @@ img {
 }
 
 
-/* =====================================================
-   FOOTER
-   ===================================================== */
 
 .footer {
     background-color: #1A1A1A;
@@ -768,9 +758,6 @@ img {
 }
 
 
-/* =====================================================
-   RESPONSIVE - TABLET
-   ===================================================== */
 
 @media (max-width: 900px) {
 
@@ -804,9 +791,6 @@ img {
 }
 
 
-/* =====================================================
-   RESPONSIVE - CELULAR
-   ===================================================== */
 
 @media (max-width: 600px) {
 
@@ -847,8 +831,7 @@ img {
     }
 
 
-    /* CARRUSEL */
-
+   
     .carrusel {
         height: 550px;
     }
@@ -869,7 +852,7 @@ img {
     }
 
 
-    /* CATEGORÍAS */
+    
 
     .categorias {
         padding: 60px 5%;
@@ -884,7 +867,7 @@ img {
     }
 
 
-    /* PRODUCTOS */
+    
 
     .productos-destacados {
         padding: 60px 5%;
@@ -909,7 +892,7 @@ img {
     }
 
 
-    /* TÍTULOS */
+    
 
     .titulo-seccion {
         margin-bottom: 30px;
@@ -920,7 +903,7 @@ img {
     }
 
 
-    /* MARCA */
+    
 
     .marca-imagen {
         height: 300px;
@@ -935,7 +918,7 @@ img {
     }
 
 
-    /* OFERTAS */
+    
 
     .ofertas {
         min-height: 350px;
@@ -946,7 +929,7 @@ img {
     }
 
 
-    /* BENEFICIOS */
+    
 
     .beneficios {
         grid-template-columns: 1fr;
@@ -957,7 +940,7 @@ img {
     }
 
 
-    /* FOOTER */
+    
 
     .footer-links,
     .redes {
