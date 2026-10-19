@@ -117,9 +117,7 @@ text-align:center;
 padding:25px;
 }
 
-/* =========================================
-   PÁGINA DE PRODUCTOS
-========================================= */
+
 
 .titulo-productos {
     text-align: center;
@@ -147,7 +145,7 @@ padding:25px;
 }
 
 
-/* CATÁLOGO */
+
 
 .catalogo {
     width: 92%;
@@ -161,7 +159,7 @@ padding:25px;
 }
 
 
-/* PRODUCTO */
+
 
 .producto {
     background-color: #F5F5F2;
@@ -196,7 +194,7 @@ padding:25px;
 }
 
 
-/* ETIQUETA NUEVO */
+
 
 .etiqueta {
     position: absolute;
@@ -213,7 +211,7 @@ padding:25px;
 }
 
 
-/* INFORMACIÓN */
+
 
 .informacion-producto {
     padding: 18px 5px 25px;
@@ -245,7 +243,7 @@ padding:25px;
 }
 
 
-/* BOTÓN */
+
 
 .boton-producto {
     display: block;
@@ -271,9 +269,7 @@ padding:25px;
 }
 
 
-/* =========================================
-   MENÚ PRODUCTOS
-========================================= */
+
 
 .menu-productos {
     position: relative;
@@ -316,9 +312,7 @@ padding:25px;
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
+
 
 footer {
     background-color: #1A1A1A;
@@ -330,9 +324,7 @@ footer {
 }
 
 
-/* =========================================
-   CELULAR
-========================================= */
+
 
 @media (max-width: 900px) {
 
@@ -366,10 +358,7 @@ footer {
         height: 400px;
     }
 
-}/* =========================================
-   ENCABEZADO
-========================================= */
-
+}
 .encabezado {
     width: 100%;
     height: 90px;
@@ -389,7 +378,7 @@ footer {
 }
 
 
-/* LOGO */
+
 
 .logo {
     color: #1A1A1A;
@@ -403,7 +392,7 @@ footer {
 }
 
 
-/* MENÚ */
+
 
 .menu {
     display: flex;
@@ -432,14 +421,14 @@ footer {
 }
 
 
-/* PRODUCTOS */
+
 
 .menu-productos {
     position: relative;
 }
 
 
-/* SUBMENÚ */
+
 
 .submenu {
     display: none;
@@ -459,7 +448,7 @@ footer {
 }
 
 
-/* CUANDO SE ABRE */
+
 
 .submenu.mostrar {
     display: block;
@@ -486,9 +475,7 @@ footer {
 }
 
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+
 
 @media (max-width: 750px) {
 
@@ -511,9 +498,6 @@ footer {
     }
 
 }
-/* =========================
-   PÁGINA DEL PRODUCTO
-========================= */
 
 .producto {
 
@@ -532,7 +516,7 @@ footer {
 }
 
 
-/* GALERÍA */
+
 
 .galeria {
 
@@ -591,7 +575,7 @@ footer {
 }
 
 
-/* INFORMACIÓN */
+
 
 .informacion-producto {
 
@@ -653,7 +637,7 @@ footer {
 }
 
 
-/* TALLES */
+
 
 .seleccion h3,
 .cantidad h3 {
@@ -700,7 +684,6 @@ footer {
 }
 
 
-/* CANTIDAD */
 
 .cantidad {
 
@@ -750,7 +733,7 @@ footer {
 }
 
 
-/* BOTONES */
+
 
 .btn-carrito,
 .btn-comprar {
@@ -804,7 +787,7 @@ footer {
 }
 
 
-/* DESCRIPCIÓN */
+
 
 .descripcion {
 
@@ -831,9 +814,7 @@ footer {
 }
 
 
-/* =========================
-   CELULAR
-========================= */
+
 
 @media (max-width: 768px) {
 
@@ -878,9 +859,7 @@ footer {
     }
 
 }
-/* =================================
-   DISEÑO ADAPTABLE / RESPONSIVE
-================================= */
+
 
 /* TABLETS */
 @media (max-width: 900px) {
@@ -905,7 +884,7 @@ footer {
 }
 
 
-/* CELULARES */
+
 @media (max-width: 600px) {
 
     /* HEADER */
@@ -989,7 +968,7 @@ footer {
 }
 
 
-/* CELULARES MUY CHICOS */
+
 @media (max-width: 400px) {
 
     .menu {
