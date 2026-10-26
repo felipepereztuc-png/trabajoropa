@@ -993,3 +993,97 @@ footer {
     }
 
 }
+css
+/* ===== FLEXBOX: DISTRIBUCIÓN DEL PRODUCTO ===== */
+
+main.producto {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* Galería de imágenes */
+.galeria {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1 1 55%;
+    min-width: 0;
+}
+
+/* Miniaturas */
+.miniaturas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 0 0 80px;
+}
+
+.miniaturas img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Imagen principal */
+.imagen-principal {
+    flex: 1;
+    min-width: 0;
+}
+
+.imagen-principal img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Información del producto */
+.informacion-producto {
+    display: flex;
+    flex: 1 1 40%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    min-width: 0;
+}
+
+/* Talles */
+.talles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Cantidad */
+.contador {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Botones */
+.btn-carrito,
+.btn-comprar {
+    width: 100%;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 768px) {
+    main.producto {
+        flex-direction: column;
+        gap: 28px;
+    }
+
+    .galeria,
+    .informacion-producto {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .miniaturas {
+        flex-basis: 65px;
+    }
+}

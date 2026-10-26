@@ -630,3 +630,64 @@ footer {
     }
 
 }
+/* ================= FLEXBOX: CATÁLOGO ================= */
+
+.catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 24px;
+}
+
+.catalogo > .producto {
+    flex: 1 1 calc(25% - 24px);
+    min-width: 220px;
+    max-width: calc(25% - 18px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.catalogo .imagen-producto {
+    width: 100%;
+    overflow: hidden;
+}
+
+.catalogo .imagen-producto img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+}
+
+.catalogo .informacion-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1;
+}
+
+.catalogo .boton-producto {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+/* ================= CATÁLOGO RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+    .catalogo > .producto {
+        flex-basis: calc(50% - 12px);
+        max-width: calc(50% - 12px);
+    }
+}
+
+@media (max-width: 600px) {
+    .catalogo > .producto {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+}
